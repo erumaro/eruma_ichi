@@ -1,0 +1,671 @@
+/*
+Theme Name: Eruma Ichi
+Theme URI: http://www.eruma.se/
+Version: 1.0
+Description: One page website theme designed for Eruma.se
+Author: Tobias Årud
+Author URI: http://www.tobiasarud.se
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FONT-FACE
+----------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:700);
+
+@import url(http://fonts.googleapis.com/css?family=Shanti);
+
+@font-face {
+    font-family: 'LiberationSerifItalic';
+    src: url('LiberationSerif-Italic-webfont.eot');
+    src: url('LiberationSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationSerif-Italic-webfont.woff') format('woff'),
+         url('LiberationSerif-Italic-webfont.ttf') format('truetype'),
+         url('LiberationSerif-Italic-webfont.svg#LiberationSerifItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* GENERAL STYLE ELEMENTS
+----------------------------------------------- */
+
+html, body{
+    /*background-color: #d9dadb;*/
+    background : url(images/shattered.png);
+}
+
+#container{
+    max-width:1200px;
+    width:95%;
+    margin: 0 auto;
+    padding:5px;
+}
+
+.wrapper{
+    max-width:1200px;
+    width:95%;
+    margin: 0 auto;
+    clear:both;
+}
+
+h3.section-title{
+    text-align:center;
+    font-family: 'Droid Sans', sans-serif;
+    font-size:1.5em; /* 24px / 16px */
+    padding-top:5px;
+    padding-bottom:5px;
+    color:#fff;
+    text-transform:uppercase;
+}
+
+section{
+    background:white;
+}
+
+img, embed, object, video{
+    max-width:100%;
+    height:auto;
+}
+
+/* CLEARFIX & COLLAPSEFIX
+----------------------------------------------- */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+
+.collapsefix{overflow:hidden;}
+
+/* HEADER & NAVIGATION STYLE ELEMENTS
+----------------------------------------------- */
+
+header{
+    background:#303030;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    width:100%;
+    height:auto;
+    padding-top:10px;
+    padding-bottom:10px;
+    overflow: hidden;
+}
+
+/* styles for desktop */
+.tinynav { display: none }
+
+nav{
+    text-align:center;
+}
+
+nav ul{
+}
+
+nav li{
+    display:inline;
+    position:relative;
+}
+
+nav li a{
+    font-family: 'Droid Sans', sans-serif;
+    color:#fff;
+    display:block;
+    text-decoration: none;
+    font-weight: 700;
+    display:inline-block;
+    padding:10px;
+    text-transform:uppercase;
+}
+
+nav li a:hover{
+    color:#ff8c00;
+}
+
+/* HOME STYLE ELEMENTS
+----------------------------------------------- */
+
+#home {
+    margin-bottom: 60px;
+}
+
+h1.site-title {
+    text-decoration:none;
+    border:0;
+    width : 600px;
+    height : 208px;
+    margin : 0 auto;
+    padding : 0;
+    background : url(images/logo.png) no-repeat 0 0;
+}
+ 
+h1.site-title a {
+    display : block;
+    height : 208px;
+    text-indent : -9999px; 
+}
+
+h2.site-description{
+    padding-top:20px;
+    font-family: 'LiberationSerifItalic', serif;
+    color:#fff;
+    text-align:center;
+    font-size:2.1em;
+}
+
+h2.tagline{
+    padding-top:20px;
+    padding-bottom:20px;
+    font-family: 'LiberationSerifItalic', serif;
+    color:#fff;
+    text-align:center;
+    font-size:1.4em;
+}
+
+/* Social buttons */
+
+h4.soctitle {
+    padding-top:20px;
+    font-family: 'LiberationSerifItalic', serif;
+    color:#fff;
+    text-align:center;
+    font-size:1.4em;
+}
+
+#social{
+}
+
+#head-soc{
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+
+#head-soc ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+
+#head-soc ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+   margin-right:10px;
+}
+
+#head-soc ul li a {
+    text-indent: -9999px; 
+    font-size: 0; line-height: 0; 
+    overflow: hidden ; 
+    height: 60px; 
+    width: 60px;
+    border: 0; 
+    background: url(images/social_button.png) no-repeat; 
+    display: block;
+}
+
+#head-soc li#g a {
+    background-position: 0px -60px;
+}
+
+#head-soc li#g a:hover {
+    background-position: 0px 0px;
+}
+
+#head-soc li#li a {
+    background-position: -60px -60px;
+}
+
+#head-soc li#li a:hover {
+    background-position: -60px 0px;
+}
+
+#head-soc li#sp a {
+    background-position: -120px -60px;
+}
+
+#head-soc li#sp a:hover {
+    background-position: -120px 0px;
+}
+
+#head-soc li#tumb a {
+    background-position: -180px -60px;
+}
+
+#head-soc li#tumb a:hover {
+    background-position: -180px 0px;
+}
+
+#head-soc li#twit a {
+    background-position: -240px -60px;
+}
+
+#head-soc li#twit a:hover {
+    background-position: -240px 0px;
+}
+
+/* PORTFOLIO STYLE ELEMENTS
+----------------------------------------------- */
+
+.ptitle{
+    font-family: 'Shanti', sans-serif;
+    font-size:0.9em;
+    color:#000;
+    text-align:center;
+}
+
+#portfolio{
+    margin-bottom: 60px;
+    width:100%;
+    left:0;
+    right:0;
+}
+
+#content{}
+
+#portfolio-header{
+    width:100%;
+    margin-bottom: 20px;
+    background:#303030;
+}
+#portfolio-title{
+    float:left;
+}
+#portfolio-filter{
+    float:right;
+}
+
+/* Filter Styling */
+ul.filter{
+}
+
+ul.filter li { 
+    float:left;
+    margin-right:10px;
+}
+
+ul.filter strong{
+    font-family: 'Droid Sans', sans-serif;
+    color:#fff;
+    display:block;
+    font-weight: 700;
+    display:inline-block;
+    padding:10px;
+    text-transform:uppercase;    
+}
+
+ul.filter a{
+    font-family: 'Droid Sans', sans-serif;
+    color:#fff;
+    display:block;
+    text-decoration: none;
+    font-weight: 700;
+    display:inline-block;
+    padding:10px;
+    text-transform:lowercase;
+}
+
+ul.filter a:hover{
+    color:#ff8c00;
+}
+
+/* Filterable Posts */
+
+#single_wrapper{
+    overflow:hidden;
+    width:100%;
+    background:white;
+    margin-bottom: 8px;
+}
+
+.page-title{
+    width:100%;
+    background:#303030;
+    text-align:center;
+    font-family: 'Droid Sans', sans-serif;
+    font-size:1.5em; /* 24px / 16px */
+    padding-top:5px;
+    padding-bottom:5px;
+    border-top:solid 2px #fff;
+    border-bottom:solid 2px #fff;
+    color:#fff;
+    text-transform:uppercase;
+}
+
+#cont-left{
+    width:60%;
+    background-color:#00a2ff;
+    float:left;
+    line-height:0;
+}
+
+#cont-right{
+    width:40%;
+    background-color:#00a2ff;
+    float:left;
+    padding-bottom:100%;
+    margin-bottom:-100%;
+}
+
+#cont-right ul{
+    width:100%;
+    height:50%;
+    background-color:#303030;
+    padding-bottom:100%;
+    margin-bottom:-100%;
+}
+
+/* ABOUT STYLE ELEMENTS
+----------------------------------------------- */
+
+
+p{
+    font-family: 'Shanti', sans-serif;
+    font-size:1.05em;
+    color:#000;
+    padding:0 2% 2% 1%;
+    line-height:110%;
+}
+
+#about {
+    margin-bottom: 60px;
+}
+
+h4.intro{
+    font-size:1.2em;
+    font-family: 'Droid Sans', sans-serif;
+    color:#fff;
+    margin-bottom:10px;
+    background:#959595;
+    padding:1%;
+    line-height:110%;
+}
+
+#aboutmain{
+    float:left;
+    width:65%;
+    background:#fff;
+}
+
+#aboutcontent{
+    margin-left:1%;
+}
+
+aside.infobox{
+    width:100%;
+    height:100%;
+    clear:both;
+}
+
+#tobiasimg{
+    width:30%;
+    height:100%;
+    float:right;
+    line-height:0;
+}
+
+.widget{
+    width:30%;
+    float:left;
+    min-height:355px;
+    height:auto;
+    background-color:#959595;
+    padding-bottom:0.5%;
+}
+
+.widget-title{
+    text-align:center;
+    font-size:1.3em;
+    color:#fff;
+    font-family: 'Droid Sans', sans-serif;
+    background:#303030;
+    padding-top:2px;
+    padding-bottom:2px;
+    text-transform:uppercase;
+    border-bottom:solid 3px #ff8c00;
+}
+
+.widget_text{
+    margin-right:5%;
+}
+
+/* Blogg Feed */
+
+.news{
+}
+
+.rss-output{
+    background:#fff;
+    color:#000;
+    margin-top:6px;
+    font-size:0.9em;
+}
+
+/* FOOTER STYLE ELEMENTS
+----------------------------------------------- */
+
+h5.footer-title{
+    text-align:center;
+    font-size:1.3em;
+    color:#fff;
+    font-family: 'Droid Sans', sans-serif;
+    padding-top:2px;
+    padding-bottom:2px;
+    text-transform:uppercase;
+    border-bottom:solid 3px #ff8c00;
+}
+
+footer{
+    background-color:#303030;
+    width:100%;
+    float:left;
+    margin-top: 100px;
+}
+
+/* Oanvänt område */
+#emptydiv{
+    width:30%;
+    float:left;
+}
+
+/* Twitter feed */
+#socialfeed{
+    width:30%;
+    float:left;
+}
+
+/* Contact */
+
+#contact{
+    width:30%;
+    float:left;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+textarea{
+    width:100%;
+}
+
+input{
+    width:100%;
+}
+
+/* Copyright */
+#copyright{
+    float:left;
+    width:100%;
+    margin-top:1%;
+}
+
+#copyright p{
+    font-family: Arial, sans-serif;
+    color:white;
+    font-size:8pt;
+    text-align:center;
+}
+
+div.wpcf7-response-output{
+    margin:0;
+}
+
+/* RESPONSIVE MEDIA
+----------------------------------------------- */
+
+@media screen and (max-width: 500px) {
+    
+    header{
+        background:#000;
+        position:static;
+        top:0;
+        left:0;
+        z-index:200;
+        width:100%;
+        height:auto;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    
+    .tinynav { display: block }
+    #menu-menunav { display: none }
+    
+    .tinynav {
+        text-align:center;
+        margin:0 auto;
+    }
+    
+     h1.site-title {
+        text-decoration:none;
+        border:0;
+        width : 288px;
+        height : 100px;
+        margin : 0 auto;
+        padding : 0;
+        background : url(images/logo_smart.png) no-repeat 0 0;
+    }
+
+    h1.site-title a {
+        display : block;
+        height : 100px;
+        text-indent : -9999px; 
+    }
+    
+    #head-soc ul li {
+        right:50%;
+        margin-right:0;
+     }
+    
+    #aboutmain{
+        float:none;
+        width:100%;
+    }
+
+    aside.infobox{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+        float:none;
+        height:100%;
+    }
+    
+   #tobiasimg{
+        width:100%;
+        height:100%;
+        float:none;
+        line-height:0;
+    }
+
+    .widget{
+        width:100%;
+        float:none;
+        min-height:300px;
+        height:auto;
+        background-color:#303030;
+        padding-bottom:1%;
+        margin-bottom:5px;
+    }
+    
+    #emptydiv{
+        width:100%;
+        float:none;
+        padding-bottom:2%;
+    }
+    
+    #contact{
+        width:100%;
+        float:none;
+        margin-left:0;
+        margin-right:0;
+        margin-bottom:2%;
+    }
+
+    form.wpcf7-form{
+    }
+    
+    textarea{
+        width:95%;
+    }
+    
+    input{
+        width:95%;
+    }    
+    
+    #socialfeed{
+        width:100%;
+        float:none;
+    }
+}/*/mediaquery*/
